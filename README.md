@@ -12,7 +12,7 @@ Deletar o arquivo de rom se não possui imagem com o mesmo nome.
 ## **magia.bat**
 
 **Motivo da ciração:**
-Motivo da criação: Sempre fazia uma série de comandos, decidi criar um .bat para fazer todos os comandos de uma única vez, penso no futuro em melhorar ele.
+Sempre fazia uma série de comandos, decidi criar um .bat para fazer todos os comandos de uma única vez, penso no futuro em melhorar ele.
 
 **Utilidade:**
 Executar em sequência git checkout, git pull, dotnet clean, nuget restore e dotnet build
