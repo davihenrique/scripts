@@ -19,7 +19,7 @@ Executar em sequência git checkout, git pull, dotnet clean, nuget restore e dot
 
 ## **paysandu**
 **Motivo da ciração:**
-Dias atrás vi o meme "paysandu", fiquei lembrando desse meme diversas vezes, então crie um script para ser adicionando ao Task Sheduler e tocar ouvir esse áudio aleatoriamente, não é bem aleatório... talvez no futuro para um script para ter uma aleatoriedade e chamar esse.
+Dias atrás vi o meme "paysandu", fiquei lembrando desse meme diversas vezes, então crie um script para ser adicionando ao Task Sheduler e ouvir esse áudio aleatoriamente, não é bem aleatório... talvez no futuro para um script para ter uma aleatoriedade e chamar esse.
 
 **Utilidade:**
 Ser adicionando ao Task Scheduler para iniciar o áudio.
