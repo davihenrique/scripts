@@ -19,7 +19,14 @@ Executar em sequência git checkout, git pull, dotnet clean, nuget restore e dot
 
 ## **paysandu**
 **Motivo da ciração:**
-Dias atrás vi o meme "paysandu", fiquei lembrando desse meme diversas vezes, então crie um script para ser adicionando ao Task Sheduler e ouvir esse áudio aleatoriamente, não é bem aleatório... talvez no futuro para um script para ter uma aleatoriedade e chamar esse.
+Dias atrás vi o meme "paysandu", fiquei lembrando desse meme diversas vezes, então criei um script para ser adicionando ao Task Sheduler e ouvir esse áudio aleatoriamente, não é bem aleatório... talvez no futuro para um script para ter uma aleatoriedade e chamar esse.
 
 **Utilidade:**
 Ser adicionando ao Task Scheduler para iniciar o áudio.
+
+## **MeiaNoite**
+**Motivo da ciração:**
+Fiz um script em .vbs para add ao Task Sheduler e me lembrar que já é meia-noite e eu preciso ir dormir. Talvez no futuro crie uma versão com interface gráfica em Python.
+
+**Utilidade:**
+Ser adicionando ao Task Scheduler para desligar o PC meia-noite.
