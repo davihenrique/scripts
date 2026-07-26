@@ -5,9 +5,12 @@ from pathlib import Path
 
 from PIL import Image, ImageSequence
 
-BASE = Path(__file__).parent
-INPUT = BASE / "INPUT"
-OUTPUT = BASE / "OUTPUT"
+# Importa o módulo folders
+sys.path.insert(0, str(Path(__file__).parent.parent / "Common"))
+from folders import get_input_output_paths
+
+# Obtém os caminhos INPUT e OUTPUT
+INPUT, OUTPUT = get_input_output_paths()
 
 FFMPEG = shutil.which("ffmpeg")
 
@@ -65,15 +68,6 @@ def converter_com_pillow(caminho: Path, destino: Path) -> None:
 
 
 def main() -> None:
-    pastas_criadas = []
-    for pasta in (INPUT, OUTPUT):
-        if not pasta.exists():
-            pasta.mkdir(parents=True)
-            pastas_criadas.append(pasta.name)
-
-    if pastas_criadas:
-        print(f"Pasta(s) criada(s): {', '.join(pastas_criadas)}")
-
     imagens = sorted(INPUT.glob("*.webp"))
     if not imagens:
         print("Nenhuma imagem .webp encontrada na pasta INPUT.")

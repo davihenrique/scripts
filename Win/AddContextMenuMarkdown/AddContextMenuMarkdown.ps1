@@ -8,7 +8,7 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 # Cria arquivo modelo em ShellNew
 $templateDir = "C:\Windows\ShellNew"
-$templateFile = "$templateDir\documento.md"
+$templateFile = "$templateDir\query.sql"
 
 if (-not (Test-Path $templateDir)) {
     New-Item -ItemType Directory -Path $templateDir -Force | Out-Null
@@ -22,15 +22,15 @@ if (-not (Get-PSDrive -Name HKCR -ErrorAction SilentlyContinue)) {
 }
 
 # Registra a extensao .md (preserva valor existente se houver)
-$mdKey = "HKCR:\.md"
+$mdKey = "HKCR:\.sql"
 if (-not (Test-Path $mdKey)) {
     New-Item -Path $mdKey -Force | Out-Null
 }
 
 $currentDefault = (Get-ItemProperty -Path $mdKey -Name "(Default)" -ErrorAction SilentlyContinue)."(Default)"
 if (-not $currentDefault) {
-    Set-ItemProperty -Path $mdKey -Name "(Default)" -Value "Markdown.Document"
-    $currentDefault = "Markdown.Document"
+    Set-ItemProperty -Path $mdKey -Name "(Default)" -Value "sql.query"
+    $currentDefault = "sql.query"
 }
 
 # Registra o tipo de arquivo com nome amigavel
@@ -38,7 +38,7 @@ $typeKey = "HKCR:\$currentDefault"
 if (-not (Test-Path $typeKey)) {
     New-Item -Path $typeKey -Force | Out-Null
 }
-Set-ItemProperty -Path $typeKey -Name "(Default)" -Value "Documento Markdown"
+Set-ItemProperty -Path $typeKey -Name "(Default)" -Value "Nova Query SQL"
 
 # Adiciona a chave ShellNew para aparecer no menu Novo
 $shellNewKey = "$mdKey\ShellNew"
